@@ -93,7 +93,6 @@ if __name__ == "__main__":
     target, data = load_data()
     ridge_model = ridge_tuning_and_training(data, target, cv_number=10)
     
-    exit()
-    
+    # シリアライズしておくと後々予測で使える。
     with open("ridge_model", "w") as f:
         pickle.dump(ridge_model)
